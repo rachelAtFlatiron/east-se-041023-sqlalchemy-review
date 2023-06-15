@@ -6,26 +6,7 @@ from sqlalchemy_serializer import SerializerMixin
 
 db = SQLAlchemy()
 
-'''
-ERRORS
-
-Usage: flask [OPTIONS] COMMAND [ARGS]...
-Try 'flask --help' for help.
-
-Error: No such command 'db'.
-
-- may not be in the right folder
-- your pipenv shell may not be running
-- or flask may not be installed
-'''
-
-
-'''
-associaton_proxy('relationship to intermediary', 'relationship from intermediary to target')
-'''
-
-# create model cars
-class Car(db.Model):
+class Car(db.Model, SerializerMixin):
     # create table name cars
     __tablename__ = "cars"
 
@@ -42,11 +23,13 @@ class Car(db.Model):
     # create relationship to color
     colors_of_cur_car = association_proxy('licenses', 'color')
 
+    serialize_rules = ('-licenses.car', '-licenses.color')
+
     def __repr__(self):
         return f'<Car manufacturer={self.manufacturer} id={self.id} />'
 
 # create model colors
-class Color(db.Model):
+class Color(db.Model, SerializerMixin):
     # create tablename colors
     __tablename__ = "colors"
 
@@ -61,18 +44,15 @@ class Color(db.Model):
     # create relationship to license
     licenses = db.relationship('License', back_populates="color")
     # create relationship to car
-    # associaton_proxy('relationship to intermediary', 'relationship from intermediary to target')
-    # licenses refers to Color.licenses
-    # car refers to License.car
-
-    # Color.licenses -> License.car -> Car
     cars_with_cur_color = association_proxy('licenses', 'car')
+
+    serialize_rules = ('-licenses.car', '-licenses.color')
 
     def __repr__(self):
         return f'<Color color={self.color} />'
 
 # create model license
-class License(db.Model):
+class License(db.Model, SerializerMixin):
     # create tablename licenses
     __tablename__ = "licenses"
 
@@ -93,6 +73,8 @@ class License(db.Model):
     car = db.relationship('Car', back_populates='licenses')
     # relationship between color and license
     color = db.relationship('Color', back_populates='licenses')
+
+    serialize_rules = ('-car.licenses', '-color.licenses')
 
     def __repr__(self):
         return f'<License plate={self.license_plate} car={self.car_id} color={self.color_id}/>'
