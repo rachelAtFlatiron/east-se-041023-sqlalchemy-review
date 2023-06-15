@@ -1,36 +1,17 @@
 <mxfile host="65bd71144e">
     <diagram id="IHKaDoGlMXZq13bv_zfR" name="Page-1">
-        <mxGraphModel dx="723" dy="299" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="647" dy="262" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="cars&lt;br&gt;&lt;br&gt;company&lt;br&gt;&lt;br&gt;licenses" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="&lt;u&gt;cars&lt;br&gt;&lt;/u&gt;&lt;br&gt;company" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="40" y="120" width="120" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="colors&lt;br&gt;&lt;br&gt;color&lt;br&gt;&lt;br&gt;license" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="3" value="&lt;u&gt;colors&lt;br&gt;&lt;/u&gt;&lt;br&gt;color" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="560" y="120" width="120" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="licenses&lt;br&gt;&lt;br&gt;license_plate&lt;br&gt;car_id&lt;br&gt;color_id&lt;br&gt;&lt;br&gt;car&lt;br&gt;color" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="4" value="&lt;u&gt;licenses&lt;/u&gt;&lt;br&gt;&lt;br&gt;license_plate&lt;br&gt;car_id&lt;br&gt;color_id&lt;br&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="310" y="120" width="120" height="160" as="geometry"/>
-                </mxCell>
-                <mxCell id="9" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;endSize=8;startSize=8;exitX=0.667;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.417;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="4">
-                    <mxGeometry width="100" relative="1" as="geometry">
-                        <mxPoint x="160" y="190" as="sourcePoint"/>
-                        <mxPoint x="310" y="200" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="190" y="230"/>
-                            <mxPoint x="250" y="240"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="10" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;endSize=8;startSize=8;entryX=0.333;entryY=0.688;entryDx=0;entryDy=0;exitX=0.583;exitY=0.813;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="3">
-                    <mxGeometry width="100" relative="1" as="geometry">
-                        <mxPoint x="430" y="199.5" as="sourcePoint"/>
-                        <mxPoint x="530" y="199.5" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="520" y="240"/>
-                        </Array>
-                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
